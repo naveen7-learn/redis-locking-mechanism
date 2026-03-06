@@ -1,0 +1,15 @@
+{
+  "name": "redis-locking-mechanism",
+  "version": "1.0.0",
+  "description": "Seat locking mechanism using Redis",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "redis": "^4.6.7",
+    "uuid": "^9.0.0"
+  }
+}
