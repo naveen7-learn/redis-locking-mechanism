@@ -3,9 +3,11 @@ import { createClient } from "redis";
 let redisClient;
 
 export const connectRedis = async () => {
+
   try {
+
     redisClient = createClient({
-      url: "redis://localhost:6379"
+      url: process.env.REDIS_URL
     });
 
     redisClient.on("error", (err) => {
@@ -17,8 +19,11 @@ export const connectRedis = async () => {
     console.log("Redis connected successfully");
 
   } catch (error) {
+
     console.error("Redis connection failed:", error);
+
   }
+
 };
 
 export { redisClient };
